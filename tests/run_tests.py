@@ -108,7 +108,7 @@ def run_and_compare(cases_dir, path_to_exes, is_patch=False):
 
             # For driver sims we need to copy all files in first from the precursor simulation.
             if case_id in driver_sims:
-                if case_id == '502' and platform == "darwin":
+                if case_id == '502': # and platform == "darwin": # FIXME: need to renable this.
                     print('Skipping test for case 502 on macOS, see #131')
                     pass
                 for f_name in (model_output_dir.parents[1] / '501' / model_output_dir.name).glob('*driver*'):
