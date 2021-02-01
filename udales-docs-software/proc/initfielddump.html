@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for uDALES">
+   
+    <meta name="author" content="The uDALES Team" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>initfielddump &ndash; uDALES</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">uDALES </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/dalesurban.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/dalesurban.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>initfielddump
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.7% of total for procedures.">86 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/modfielddump.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/modfielddump.f90.html'>modfielddump.f90</a></li>
+    
+     <li><a href='../module/modfielddump.html'>modfielddump</a></li>
+    
+  
+     <li class="active">initfielddump</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/initfielddump.html#src">initfielddump</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine initfielddump()
+    
+    
+   
+</h2>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/modmpi.html'>modmpi</a></li>
+    
+    <li><a href='../module/modglobal.html'>modglobal</a></li>
+    
+    <li><a href='../module/modstat_nc.html'>modstat_nc</a></li>
+    
+    <li><a href='../module/modfields.html'>modfields</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~initfielddump~~UsesGraph Pages: 1 -->
+<svg id="procinitfielddumpUsesGraph" width="384pt" height="154pt"
+ viewBox="0.00 0.00 384.00 154.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~initfielddump~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 150)">
+<title>proc~~initfielddump~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-150 380,-150 380,4 -4,4"/>
+<!-- proc~initfielddump -->
+<g id="proc~~initfielddump~~UsesGraph_node1" class="node">
+<title>proc~initfielddump</title>
+<polygon fill="none" stroke="#000000" points="376,-86 293,-86 293,-62 376,-62 376,-86"/>
+<text text-anchor="middle" x="334.5" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">initfielddump</text>
+</g>
+<!-- module~modfields -->
+<g id="proc~~initfielddump~~UsesGraph_node2" class="node">
+<title>module~modfields</title>
+<g id="a_proc~~initfielddump~~UsesGraph_node2"><a xlink:href=".././module/modfields.html" xlink:title="modfields">
+<polygon fill="#337ab7" stroke="#337ab7" points="252.5,-146 187.5,-146 187.5,-122 252.5,-122 252.5,-146"/>
+<text text-anchor="middle" x="220" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modfields</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;module~modfields -->
+<g id="proc~~initfielddump~~UsesGraph_edge1" class="edge">
+<title>proc~initfielddump&#45;&gt;module~modfields</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M311.3292,-86.1419C294.3351,-95.0471 271.0421,-107.253 252.2335,-117.1091"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="250.3693,-114.1344 243.1363,-121.8762 253.6184,-120.3347 250.3693,-114.1344"/>
+</g>
+<!-- module~modmpi -->
+<g id="proc~~initfielddump~~UsesGraph_node3" class="node">
+<title>module~modmpi</title>
+<g id="a_proc~~initfielddump~~UsesGraph_node3"><a xlink:href=".././module/modmpi.html" xlink:title="modmpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="147,-86 90,-86 90,-62 147,-62 147,-86"/>
+<text text-anchor="middle" x="118.5" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modmpi</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;module~modmpi -->
+<g id="proc~~initfielddump~~UsesGraph_edge2" class="edge">
+<title>proc~initfielddump&#45;&gt;module~modmpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M292.6711,-74.6385C281.1151,-74.788 268.5719,-74.9253 257,-75 224.1118,-75.2122 215.8879,-75.2549 183,-75 174.6402,-74.9352 165.6714,-74.8232 157.1597,-74.6969"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="157.1294,-71.1961 147.0755,-74.5382 157.0192,-78.1953 157.1294,-71.1961"/>
+</g>
+<!-- module~modglobal -->
+<g id="proc~~initfielddump~~UsesGraph_node4" class="node">
+<title>module~modglobal</title>
+<g id="a_proc~~initfielddump~~UsesGraph_node4"><a xlink:href=".././module/modglobal.html" xlink:title="modglobal">
+<polygon fill="#337ab7" stroke="#337ab7" points="255,-66 185,-66 185,-42 255,-42 255,-66"/>
+<text text-anchor="middle" x="220" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modglobal</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;module~modglobal -->
+<g id="proc~~initfielddump~~UsesGraph_edge3" class="edge">
+<title>proc~initfielddump&#45;&gt;module~modglobal</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M292.839,-66.723C283.8261,-65.1487 274.2553,-63.4769 265.1168,-61.8807"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="265.4887,-58.3927 255.0356,-60.1198 264.2842,-65.2883 265.4887,-58.3927"/>
+</g>
+<!-- module~modstat_nc -->
+<g id="proc~~initfielddump~~UsesGraph_node5" class="node">
+<title>module~modstat_nc</title>
+<g id="a_proc~~initfielddump~~UsesGraph_node5"><a xlink:href=".././module/modstat_nc.html" xlink:title="modstat_nc">
+<polygon fill="#337ab7" stroke="#337ab7" points="257,-24 183,-24 183,0 257,0 257,-24"/>
+<text text-anchor="middle" x="220" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">modstat_nc</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;module~modstat_nc -->
+<g id="proc~~initfielddump~~UsesGraph_edge4" class="edge">
+<title>proc~initfielddump&#45;&gt;module~modstat_nc</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M312.1514,-61.8986C294.8134,-52.5103 270.5693,-39.3825 251.3,-28.9485"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="252.7524,-25.7548 242.2922,-24.0709 249.4192,-31.9103 252.7524,-25.7548"/>
+</g>
+<!-- mpi -->
+<g id="proc~~initfielddump~~UsesGraph_node6" class="node">
+<title>mpi</title>
+<g id="a_proc~~initfielddump~~UsesGraph_node6"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-86 0,-86 0,-62 54,-62 54,-86"/>
+<text text-anchor="middle" x="27" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~modmpi&#45;&gt;mpi -->
+<g id="proc~~initfielddump~~UsesGraph_edge5" class="edge">
+<title>module~modmpi&#45;&gt;mpi</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M89.5488,-74C81.5088,-74 72.665,-74 64.2227,-74"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="64.2053,-70.5001 54.2053,-74 64.2052,-77.5001 64.2053,-70.5001"/>
+</g>
+<!-- module~modstat_nc&#45;&gt;module~modmpi -->
+<g id="proc~~initfielddump~~UsesGraph_edge6" class="edge">
+<title>module~modstat_nc&#45;&gt;module~modmpi</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M198.3731,-24.0345C193.3015,-26.923 187.9378,-30.0319 183,-33 170.6166,-40.4437 157.0981,-48.9729 145.6507,-56.3175"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="143.4837,-53.5502 136.9753,-61.9103 147.2766,-59.4336 143.4837,-53.5502"/>
+</g>
+<!-- netcdf -->
+<g id="proc~~initfielddump~~UsesGraph_node7" class="node">
+<title>netcdf</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="145.5,-24 91.5,-24 91.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">netcdf</text>
+</g>
+<!-- module~modstat_nc&#45;&gt;netcdf -->
+<g id="proc~~initfielddump~~UsesGraph_edge7" class="edge">
+<title>module~modstat_nc&#45;&gt;netcdf</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M182.7815,-12C173.9164,-12 164.457,-12 155.5974,-12"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="155.5439,-8.5001 145.5439,-12 155.5439,-15.5001 155.5439,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+
+    
+
+    <h3>Arguments</h3>
+    
+    <em>None</em>
+    <br>
+    
+    
+    
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~initfielddump~~CallsGraph Pages: 1 -->
+<svg id="procinitfielddumpCallsGraph" width="528pt" height="620pt"
+ viewBox="0.00 0.00 528.00 620.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~initfielddump~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 616)">
+<title>proc~~initfielddump~~CallsGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-616 524,-616 524,4 -4,4"/>
+<!-- proc~initfielddump -->
+<g id="proc~~initfielddump~~CallsGraph_node1" class="node">
+<title>proc~initfielddump</title>
+<polygon fill="none" stroke="#000000" points="83,-423 0,-423 0,-399 83,-399 83,-423"/>
+<text text-anchor="middle" x="41.5" y="-408.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">initfielddump</text>
+</g>
+<!-- mpi_bcast -->
+<g id="proc~~initfielddump~~CallsGraph_node2" class="node">
+<title>mpi_bcast</title>
+<polygon fill="#777777" stroke="#777777" points="206,-486 139,-486 139,-462 206,-462 206,-486"/>
+<text text-anchor="middle" x="172.5" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_bcast</text>
+</g>
+<!-- proc~initfielddump&#45;&gt;mpi_bcast -->
+<g id="proc~~initfielddump~~CallsGraph_edge4" class="edge">
+<title>proc~initfielddump&#45;&gt;mpi_bcast</title>
+<path fill="none" stroke="#ff0000" d="M62.1957,-423.1164C77.6058,-431.9155 99.2957,-443.8356 119,-453 122.766,-454.7516 126.7217,-456.4887 130.706,-458.1698"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="129.398,-461.4163 139.9783,-461.9712 132.0533,-454.9394 129.398,-461.4163"/>
+</g>
+<!-- proc~writestat_dims_nc -->
+<g id="proc~~initfielddump~~CallsGraph_node3" class="node">
+<title>proc~writestat_dims_nc</title>
+<g id="a_proc~~initfielddump~~CallsGraph_node3"><a xlink:href=".././proc/writestat_dims_nc.html" xlink:title="writestat_dims_nc">
+<polygon fill="#d9534f" stroke="#d9534f" points="226,-444 119,-444 119,-420 226,-420 226,-444"/>
+<text text-anchor="middle" x="172.5" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">writestat_dims_nc</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;proc~writestat_dims_nc -->
+<g id="proc~~initfielddump~~CallsGraph_edge1" class="edge">
+<title>proc~initfielddump&#45;&gt;proc~writestat_dims_nc</title>
+<path fill="none" stroke="#ff0000" d="M83.3094,-417.7023C91.3823,-418.9964 100.0101,-420.3795 108.6011,-421.7567"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="108.206,-425.2379 118.6339,-423.365 109.314,-418.3262 108.206,-425.2379"/>
+</g>
+<!-- proc~define_nc -->
+<g id="proc~~initfielddump~~CallsGraph_node4" class="node">
+<title>proc~define_nc</title>
+<g id="a_proc~~initfielddump~~CallsGraph_node4"><a xlink:href=".././proc/define_nc.html" xlink:title="define_nc">
+<polygon fill="#d9534f" stroke="#d9534f" points="204.5,-402 140.5,-402 140.5,-378 204.5,-378 204.5,-402"/>
+<text text-anchor="middle" x="172.5" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">define_nc</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;proc~define_nc -->
+<g id="proc~~initfielddump~~CallsGraph_edge3" class="edge">
+<title>proc~initfielddump&#45;&gt;proc~define_nc</title>
+<path fill="none" stroke="#ff0000" d="M83.3094,-404.2977C98.2758,-401.8985 115.1495,-399.1936 130.1604,-396.7873"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="130.8887,-400.2153 140.2086,-395.1765 129.7806,-393.3035 130.8887,-400.2153"/>
+</g>
+<!-- proc~open_nc -->
+<g id="proc~~initfielddump~~CallsGraph_node5" class="node">
+<title>proc~open_nc</title>
+<g id="a_proc~~initfielddump~~CallsGraph_node5"><a xlink:href=".././proc/open_nc.html" xlink:title="open_nc">
+<polygon fill="#d9534f" stroke="#d9534f" points="201.5,-276 143.5,-276 143.5,-252 201.5,-252 201.5,-276"/>
+<text text-anchor="middle" x="172.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">open_nc</text>
+</a>
+</g>
+</g>
+<!-- proc~initfielddump&#45;&gt;proc~open_nc -->
+<g id="proc~~initfielddump~~CallsGraph_edge2" class="edge">
+<title>proc~initfielddump&#45;&gt;proc~open_nc</title>
+<path fill="none" stroke="#ff0000" d="M52.2203,-398.9704C74.7701,-373.6664 127.2972,-314.7238 154.8752,-283.7774"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="157.5915,-285.9901 161.6316,-276.1958 152.3655,-281.333 157.5915,-285.9901"/>
+</g>
+<!-- nf90_inquire_dimension -->
+<g id="proc~~initfielddump~~CallsGraph_node15" class="node">
+<title>nf90_inquire_dimension</title>
+<polygon fill="#777777" stroke="#777777" points="402,-444 262,-444 262,-420 402,-420 402,-444"/>
+<text text-anchor="middle" x="332" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inquire_dimension</text>
+</g>
+<!-- proc~writestat_dims_nc&#45;&gt;nf90_inquire_dimension -->
+<g id="proc~~initfielddump~~CallsGraph_edge5" class="edge">
+<title>proc~writestat_dims_nc&#45;&gt;nf90_inquire_dimension</title>
+<path fill="none" stroke="#7fff00" d="M226.0549,-432C234.3159,-432 242.9988,-432 251.6906,-432"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="251.8733,-435.5001 261.8733,-432 251.8732,-428.5001 251.8733,-435.5001"/>
+</g>
+<!-- nf90_inq_varid -->
+<g id="proc~~initfielddump~~CallsGraph_node16" class="node">
+<title>nf90_inq_varid</title>
+<polygon fill="#777777" stroke="#777777" points="377.5,-570 286.5,-570 286.5,-546 377.5,-546 377.5,-570"/>
+<text text-anchor="middle" x="332" y="-555.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inq_varid</text>
+</g>
+<!-- proc~writestat_dims_nc&#45;&gt;nf90_inq_varid -->
+<g id="proc~~initfielddump~~CallsGraph_edge7" class="edge">
+<title>proc~writestat_dims_nc&#45;&gt;nf90_inq_varid</title>
+<path fill="none" stroke="#7fff00" d="M213.4478,-444.017C218.0255,-446.4931 222.3466,-449.4576 226,-453 255.1604,-481.2745 231.6972,-509.9534 262,-537 266.4268,-540.9511 271.5722,-544.1594 277.0259,-546.7645"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="275.8419,-550.0616 286.4229,-550.6038 278.4895,-543.5815 275.8419,-550.0616"/>
+</g>
+<!-- nf90_put_var -->
+<g id="proc~~initfielddump~~CallsGraph_node19" class="node">
+<title>nf90_put_var</title>
+<polygon fill="#777777" stroke="#777777" points="373,-612 291,-612 291,-588 373,-588 373,-612"/>
+<text text-anchor="middle" x="332" y="-597.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_put_var</text>
+</g>
+<!-- proc~writestat_dims_nc&#45;&gt;nf90_put_var -->
+<g id="proc~~initfielddump~~CallsGraph_edge6" class="edge">
+<title>proc~writestat_dims_nc&#45;&gt;nf90_put_var</title>
+<path fill="none" stroke="#7fff00" d="M214.6842,-444.0415C218.8854,-446.5013 222.7793,-449.4551 226,-453 265.1646,-496.1061 221.0893,-537.5475 262,-579 267.3308,-584.4014 273.9918,-588.4251 281.0704,-591.4202"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="280.3015,-594.8608 290.8962,-594.8994 282.638,-588.2622 280.3015,-594.8608"/>
+</g>
+<!-- nf90_put_att -->
+<g id="proc~~initfielddump~~CallsGraph_node6" class="node">
+<title>nf90_put_att</title>
+<polygon fill="#777777" stroke="#777777" points="371.5,-276 292.5,-276 292.5,-252 371.5,-252 371.5,-276"/>
+<text text-anchor="middle" x="332" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_put_att</text>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_put_att -->
+<g id="proc~~initfielddump~~CallsGraph_edge8" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_put_att</title>
+<path fill="none" stroke="#00ffff" d="M179.4697,-377.9656C192.7233,-356.1456 223.6866,-310.0027 262,-285 268.2823,-280.9003 275.3966,-277.5741 282.6235,-274.8828"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="284.1027,-278.079 292.4806,-271.5935 281.8869,-271.439 284.1027,-278.079"/>
+</g>
+<!-- nf90_def_var -->
+<g id="proc~~initfielddump~~CallsGraph_node7" class="node">
+<title>nf90_def_var</title>
+<polygon fill="#777777" stroke="#777777" points="373,-402 291,-402 291,-378 373,-378 373,-402"/>
+<text text-anchor="middle" x="332" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_def_var</text>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_def_var -->
+<g id="proc~~initfielddump~~CallsGraph_edge9" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_def_var</title>
+<path fill="none" stroke="#00ffff" d="M204.7772,-390C226.6186,-390 255.9293,-390 280.9117,-390"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="280.9604,-393.5001 290.9604,-390 280.9604,-386.5001 280.9604,-393.5001"/>
+</g>
+<!-- nf90_redef -->
+<g id="proc~~initfielddump~~CallsGraph_node9" class="node">
+<title>nf90_redef</title>
+<polygon fill="#777777" stroke="#777777" points="367,-528 297,-528 297,-504 367,-504 367,-528"/>
+<text text-anchor="middle" x="332" y="-513.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_redef</text>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_redef -->
+<g id="proc~~initfielddump~~CallsGraph_edge10" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_redef</title>
+<path fill="none" stroke="#00ffff" d="M204.6293,-397.9105C212.3401,-401.0006 220.0542,-405.2349 226,-411 255.1604,-439.2745 231.6972,-467.9534 262,-495 269.0905,-501.3286 278.0247,-505.7516 287.1167,-508.8423"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="286.3853,-512.2744 296.9645,-511.7004 288.3364,-505.5518 286.3853,-512.2744"/>
+</g>
+<!-- nf90_enddef -->
+<g id="proc~~initfielddump~~CallsGraph_node13" class="node">
+<title>nf90_enddef</title>
+<polygon fill="#777777" stroke="#777777" points="371.5,-360 292.5,-360 292.5,-336 371.5,-336 371.5,-360"/>
+<text text-anchor="middle" x="332" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_enddef</text>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_enddef -->
+<g id="proc~~initfielddump~~CallsGraph_edge11" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_enddef</title>
+<path fill="none" stroke="#00ffff" d="M204.7772,-381.5007C227.1175,-375.618 257.2721,-367.6776 282.6166,-361.0038"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="283.6467,-364.3519 292.4258,-358.4208 281.8641,-357.5827 283.6467,-364.3519"/>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_inq_varid -->
+<g id="proc~~initfielddump~~CallsGraph_edge12" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_inq_varid</title>
+<path fill="none" stroke="#00ffff" d="M204.5882,-397.1894C212.4825,-400.2987 220.2966,-404.7226 226,-411 265.1646,-454.1061 221.0893,-495.5475 262,-537 266.2251,-541.281 271.2858,-544.6967 276.7277,-547.4206"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="275.5906,-550.7391 286.1659,-551.3824 278.3,-544.2846 275.5906,-550.7391"/>
+</g>
+<!-- proc~nchandle_error -->
+<g id="proc~~initfielddump~~CallsGraph_node17" class="node">
+<title>proc~nchandle_error</title>
+<g id="a_proc~~initfielddump~~CallsGraph_node17"><a xlink:href=".././proc/nchandle_error.html" xlink:title="nchandle_error">
+<polygon fill="#d9534f" stroke="#d9534f" points="379,-486 285,-486 285,-462 379,-462 379,-486"/>
+<text text-anchor="middle" x="332" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nchandle_error</text>
+</a>
+</g>
+</g>
+<!-- proc~define_nc&#45;&gt;proc~nchandle_error -->
+<g id="proc~~initfielddump~~CallsGraph_edge13" class="edge">
+<title>proc~define_nc&#45;&gt;proc~nchandle_error</title>
+<path fill="none" stroke="#00ffff" d="M204.6469,-399.6837C212.0217,-402.6835 219.5758,-406.432 226,-411 246.0366,-425.2471 241.3924,-439.5922 262,-453 266.1045,-455.6705 270.5623,-458.013 275.1737,-460.0658"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="274.205,-463.447 284.7908,-463.8849 276.7886,-456.9412 274.205,-463.447"/>
+</g>
+<!-- nf90_inq_dimid -->
+<g id="proc~~initfielddump~~CallsGraph_node20" class="node">
+<title>nf90_inq_dimid</title>
+<polygon fill="#777777" stroke="#777777" points="379,-318 285,-318 285,-294 379,-294 379,-318"/>
+<text text-anchor="middle" x="332" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inq_dimid</text>
+</g>
+<!-- proc~define_nc&#45;&gt;nf90_inq_dimid -->
+<g id="proc~~initfielddump~~CallsGraph_edge14" class="edge">
+<title>proc~define_nc&#45;&gt;nf90_inq_dimid</title>
+<path fill="none" stroke="#00ffff" d="M186.4772,-377.9808C203.3644,-363.9968 233.1177,-341.0374 262,-327 266.2686,-324.9254 270.7843,-323.0087 275.3838,-321.248"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="276.65,-324.5124 284.89,-317.8527 274.2954,-317.9203 276.65,-324.5124"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_put_att -->
+<g id="proc~~initfielddump~~CallsGraph_edge15" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_put_att</title>
+<path fill="none" stroke="#7f00ff" d="M201.7548,-264C224.2235,-264 255.7767,-264 282.1986,-264"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="282.4162,-267.5001 292.4162,-264 282.4161,-260.5001 282.4162,-267.5001"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_def_var -->
+<g id="proc~~initfielddump~~CallsGraph_edge16" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_def_var</title>
+<path fill="none" stroke="#7f00ff" d="M179.4697,-276.0344C192.7233,-297.8544 223.6866,-343.9973 262,-369 267.7826,-372.7736 274.2701,-375.8919 280.9014,-378.4628"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="280.0599,-381.8756 290.6547,-381.8506 282.3568,-375.2631 280.0599,-381.8756"/>
+</g>
+<!-- nf90_create -->
+<g id="proc~~initfielddump~~CallsGraph_node8" class="node">
+<title>nf90_create</title>
+<polygon fill="#777777" stroke="#777777" points="370,-108 294,-108 294,-84 370,-84 370,-108"/>
+<text text-anchor="middle" x="332" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_create</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_create -->
+<g id="proc~~initfielddump~~CallsGraph_edge25" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_create</title>
+<path fill="none" stroke="#7f00ff" d="M176.5367,-251.6435C186.403,-223.3956 214.4704,-153.7114 262,-117 268.5677,-111.9272 276.3487,-108.0757 284.2944,-105.1526"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="285.5519,-108.4247 293.9976,-102.0278 283.4061,-101.7617 285.5519,-108.4247"/>
+</g>
+<!-- nf90_open -->
+<g id="proc~~initfielddump~~CallsGraph_node10" class="node">
+<title>nf90_open</title>
+<polygon fill="#777777" stroke="#777777" points="366.5,-66 297.5,-66 297.5,-42 366.5,-42 366.5,-66"/>
+<text text-anchor="middle" x="332" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_open</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_open -->
+<g id="proc~~initfielddump~~CallsGraph_edge17" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_open</title>
+<path fill="none" stroke="#7f00ff" d="M174.7195,-251.7496C181.4404,-218.2283 204.7317,-124.2234 262,-75 269.3556,-68.6777 278.5602,-64.2587 287.8535,-61.17"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="288.8464,-64.5265 297.4966,-58.4089 286.9194,-57.7969 288.8464,-64.5265"/>
+</g>
+<!-- nf90_sync -->
+<g id="proc~~initfielddump~~CallsGraph_node11" class="node">
+<title>nf90_sync</title>
+<polygon fill="#777777" stroke="#777777" points="365,-24 299,-24 299,0 365,0 365,-24"/>
+<text text-anchor="middle" x="332" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_sync</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_sync -->
+<g id="proc~~initfielddump~~CallsGraph_edge18" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_sync</title>
+<path fill="none" stroke="#7f00ff" d="M173.5342,-251.9018C177.4463,-213.8099 194.7404,-95.1966 262,-33 269.5455,-26.0225 279.324,-21.3581 289.1671,-18.2415"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="290.2021,-21.5876 298.9513,-15.6126 288.3856,-14.8274 290.2021,-21.5876"/>
+</g>
+<!-- nf90_inquire -->
+<g id="proc~~initfielddump~~CallsGraph_node12" class="node">
+<title>nf90_inquire</title>
+<polygon fill="#777777" stroke="#777777" points="371.5,-234 292.5,-234 292.5,-210 371.5,-210 371.5,-234"/>
+<text text-anchor="middle" x="332" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_inquire</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inquire -->
+<g id="proc~~initfielddump~~CallsGraph_edge19" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inquire</title>
+<path fill="none" stroke="#7f00ff" d="M201.7548,-256.2966C224.323,-250.3538 256.0561,-241.9978 282.5491,-235.0216"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="283.6371,-238.3545 292.4162,-232.4233 281.8545,-231.5852 283.6371,-238.3545"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_enddef -->
+<g id="proc~~initfielddump~~CallsGraph_edge21" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_enddef</title>
+<path fill="none" stroke="#7f00ff" d="M186.4772,-276.0192C203.3644,-290.0032 233.1177,-312.9626 262,-327 268.5117,-330.1648 275.5984,-332.9621 282.6802,-335.3985"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="281.6881,-338.756 292.2797,-338.4978 283.8388,-332.0946 281.6881,-338.756"/>
+</g>
+<!-- nf90_def_dim -->
+<g id="proc~~initfielddump~~CallsGraph_node14" class="node">
+<title>nf90_def_dim</title>
+<polygon fill="#777777" stroke="#777777" points="374.5,-192 289.5,-192 289.5,-168 374.5,-168 374.5,-192"/>
+<text text-anchor="middle" x="332" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_def_dim</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_def_dim -->
+<g id="proc~~initfielddump~~CallsGraph_edge22" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_def_dim</title>
+<path fill="none" stroke="#7f00ff" d="M186.4772,-251.9808C203.3644,-237.9968 233.1177,-215.0374 262,-201 267.6166,-198.2702 273.661,-195.8139 279.761,-193.6267"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="280.9734,-196.9117 289.3392,-190.4106 278.7452,-190.2758 280.9734,-196.9117"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inquire_dimension -->
+<g id="proc~~initfielddump~~CallsGraph_edge23" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inquire_dimension</title>
+<path fill="none" stroke="#7f00ff" d="M178.3917,-276.0173C194.1137,-307.6513 237.5258,-392.0963 262,-411 264.0208,-412.5609 266.1565,-414.0061 268.3765,-415.3442"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="266.8074,-418.4733 277.2928,-419.9927 270.0435,-412.2662 266.8074,-418.4733"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inq_varid -->
+<g id="proc~~initfielddump~~CallsGraph_edge24" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inq_varid</title>
+<path fill="none" stroke="#7f00ff" d="M180.014,-276.1378C191.5172,-295.2229 213.4731,-333.7178 226,-369 251.5495,-440.9606 210.2168,-480.8786 262,-537 266.134,-541.4803 271.1819,-545.0186 276.6552,-547.8106"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="275.608,-551.1678 286.1815,-551.8394 278.3346,-544.7206 275.608,-551.1678"/>
+</g>
+<!-- nf90_get_var -->
+<g id="proc~~initfielddump~~CallsGraph_node18" class="node">
+<title>nf90_get_var</title>
+<polygon fill="#777777" stroke="#777777" points="373,-150 291,-150 291,-126 373,-126 373,-150"/>
+<text text-anchor="middle" x="332" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_get_var</text>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_get_var -->
+<g id="proc~~initfielddump~~CallsGraph_edge20" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_get_var</title>
+<path fill="none" stroke="#7f00ff" d="M179.4697,-251.9656C192.7233,-230.1456 223.6866,-184.0027 262,-159 267.7826,-155.2264 274.2701,-152.1081 280.9014,-149.5372"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="282.3568,-152.7369 290.6547,-146.1494 280.0599,-146.1244 282.3568,-152.7369"/>
+</g>
+<!-- proc~open_nc&#45;&gt;nf90_inq_dimid -->
+<g id="proc~~initfielddump~~CallsGraph_edge26" class="edge">
+<title>proc~open_nc&#45;&gt;nf90_inq_dimid</title>
+<path fill="none" stroke="#7f00ff" d="M201.7548,-271.7034C222.6356,-277.2019 251.3623,-284.7662 276.525,-291.3922"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="275.7688,-294.8123 286.3304,-293.9742 277.5513,-288.043 275.7688,-294.8123"/>
+</g>
+<!-- nf90_strerror -->
+<g id="proc~~initfielddump~~CallsGraph_node21" class="node">
+<title>nf90_strerror</title>
+<polygon fill="#777777" stroke="#777777" points="520,-486 438,-486 438,-462 520,-462 520,-486"/>
+<text text-anchor="middle" x="479" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">nf90_strerror</text>
+</g>
+<!-- proc~nchandle_error&#45;&gt;nf90_strerror -->
+<g id="proc~~initfielddump~~CallsGraph_edge27" class="edge">
+<title>proc~nchandle_error&#45;&gt;nf90_strerror</title>
+<path fill="none" stroke="#6500ff" d="M379.3209,-474C394.7432,-474 411.9345,-474 427.6385,-474"/>
+<polygon fill="#6500ff" stroke="#6500ff" points="427.7101,-477.5001 437.7101,-474 427.71,-470.5001 427.7101,-477.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="599pt" height="32pt"
+ viewBox="0.00 0.00 598.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 594.5,-28 594.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="147.5,-24 89.5,-24 89.5,0 147.5,0 147.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="227,-24 166,-24 166,0 227,0 227,-24"/>
+<text text-anchor="middle" x="196.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="392,-24 245,-24 245,0 392,0 392,-24"/>
+<text text-anchor="middle" x="318.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.5,-24 410.5,-24 410.5,0 468.5,0 468.5,-24"/>
+<text text-anchor="middle" x="439.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="590.5,-24 486.5,-24 486.5,0 590.5,0 590.5,-24"/>
+<text text-anchor="middle" x="538.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+     
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~initfielddump~~CalledByGraph Pages: 1 -->
+<svg id="procinitfielddumpCalledByGraph" width="212pt" height="32pt"
+ viewBox="0.00 0.00 212.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~initfielddump~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~initfielddump~~CalledByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 208,-28 208,4 -4,4"/>
+<!-- proc~initfielddump -->
+<g id="proc~~initfielddump~~CalledByGraph_node1" class="node">
+<title>proc~initfielddump</title>
+<polygon fill="none" stroke="#000000" points="204,-24 121,-24 121,0 204,0 204,-24"/>
+<text text-anchor="middle" x="162.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">initfielddump</text>
+</g>
+<!-- program~dalesurban -->
+<g id="proc~~initfielddump~~CalledByGraph_node2" class="node">
+<title>program~dalesurban</title>
+<g id="a_proc~~initfielddump~~CalledByGraph_node2"><a xlink:href=".././program/dalesurban.html" xlink:title="DALESURBAN">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="85,-24 0,-24 0,0 85,0 85,-24"/>
+<text text-anchor="middle" x="42.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DALESURBAN</text>
+</a>
+</g>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~initfielddump -->
+<g id="proc~~initfielddump~~CalledByGraph_edge1" class="edge">
+<title>program~dalesurban&#45;&gt;proc~initfielddump</title>
+<path fill="none" stroke="#ff0000" d="M85.1454,-12C93.383,-12 102.0981,-12 110.5928,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.7983,-15.5001 120.7982,-12 110.7982,-8.5001 110.7983,-15.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="599pt" height="32pt"
+ viewBox="0.00 0.00 598.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 594.5,-28 594.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="147.5,-24 89.5,-24 89.5,0 147.5,0 147.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="227,-24 166,-24 166,0 227,0 227,-24"/>
+<text text-anchor="middle" x="196.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="392,-24 245,-24 245,0 392,0 392,-24"/>
+<text text-anchor="middle" x="318.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.5,-24 410.5,-24 410.5,0 468.5,0 468.5,-24"/>
+<text text-anchor="middle" x="439.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="590.5,-24 486.5,-24 486.5,0 590.5,0 590.5,-24"/>
+<text text-anchor="middle" x="538.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/initfielddump.html#src">initfielddump</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span>  <span class="k">subroutine </span><span class="n">initfielddump</span>
+    <span class="k">use </span><span class="n">modmpi</span><span class="p">,</span>   <span class="k">only</span>   <span class="p">:</span><span class="n">myid</span><span class="p">,</span><span class="n">my_real</span><span class="p">,</span><span class="n">mpierr</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">mpi_logical</span><span class="p">,</span><span class="n">mpi_integer</span><span class="p">,</span><span class="n">cmyid</span><span class="p">,</span> <span class="n">mpi_character</span>
+    <span class="k">use </span><span class="n">modglobal</span><span class="p">,</span><span class="k">only</span>   <span class="p">:</span><span class="n">imax</span><span class="p">,</span><span class="n">jmax</span><span class="p">,</span><span class="n">kmax</span><span class="p">,</span><span class="n">cexpnr</span><span class="p">,</span><span class="n">ifnamopt</span><span class="p">,</span><span class="n">fname_options</span><span class="p">,</span><span class="n">dtmax</span><span class="p">,</span><span class="n">kb</span><span class="p">,</span><span class="n">ke</span><span class="p">,</span> <span class="n">ladaptive</span><span class="p">,</span><span class="n">dt_lim</span><span class="p">,</span><span class="n">btime</span><span class="p">,</span><span class="n">nsv</span><span class="p">,</span><span class="n">fieldvars</span><span class="p">,</span><span class="n">ib</span><span class="p">,</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">,</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">,</span><span class="n">ke</span><span class="p">,</span> <span class="n">lfielddump</span>
+    <span class="k">use </span><span class="n">modstat_nc</span><span class="p">,</span><span class="k">only</span>  <span class="p">:</span> <span class="n">open_nc</span><span class="p">,</span> <span class="n">define_nc</span><span class="p">,</span><span class="n">ncinfo</span><span class="p">,</span><span class="n">writestat_dims_nc</span>
+    <span class="k">use </span><span class="n">modfields</span><span class="p">,</span> <span class="k">only</span>  <span class="p">:</span> <span class="n">u0</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">w0</span><span class="p">,</span><span class="n">thl0</span><span class="p">,</span><span class="n">sv0</span><span class="p">,</span><span class="n">ql0</span><span class="p">,</span><span class="n">qt0</span><span class="p">,</span><span class="n">pres0</span>
+    <span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">integer</span> <span class="kd">::</span> <span class="n">ierr</span>
+
+  <span class="c">!  type(domainptr), dimension(nvar) :: pfields</span>
+
+    <span class="n">nvar</span> <span class="o">=</span> <span class="p">(</span><span class="nb">LEN</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">fieldvars</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">nvar</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">      </span><span class="n">lfielddump</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+      <span class="k">print</span> <span class="o">*</span><span class="p">,</span> <span class="s1">&#39;empty fieldvars therefore lfielddump = .false. and no instantaneous fields outputted&#39;</span>
+      <span class="k">return</span>
+<span class="k">    else</span>
+<span class="k">      allocate</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span><span class="n">nvar</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> 
+    <span class="k">end if</span>
+
+
+<span class="k">    </span><span class="n">klow</span><span class="o">=</span><span class="n">kb</span>
+    <span class="n">khigh</span><span class="o">=</span><span class="n">ke</span>
+
+<span class="c">!ils13 13.08.18: why is this broadcast, doesn&#39;t every processor do it anyway?</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">klow</span>        <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_INTEGER</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">khigh</span>       <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_INTEGER</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">lfielddump</span>  <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_LOGICAL</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">ldiracc</span>     <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_LOGICAL</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">lbinary</span>     <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_LOGICAL</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">ncname</span>     <span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="n">MPI_CHARACTER</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">mpierr</span><span class="p">)</span> 
+    <span class="k">call </span><span class="n">MPI_BCAST</span><span class="p">(</span><span class="n">nvar</span>       <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MPI_INTEGER</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">comm3d</span><span class="p">,</span><span class="n">mpierr</span><span class="p">)</span>
+
+    <span class="c">!    dt_lim = min(dt_lim,tnext)</span>
+
+    <span class="k">if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.(</span><span class="n">lfielddump</span><span class="p">))</span> <span class="k">return</span>
+
+<span class="k">    </span><span class="n">fname</span><span class="p">(</span><span class="mi">11</span><span class="p">:</span><span class="mi">13</span><span class="p">)</span> <span class="o">=</span> <span class="n">cmyid</span>
+    <span class="n">fname</span><span class="p">(</span><span class="mi">15</span><span class="p">:</span><span class="mi">17</span><span class="p">)</span> <span class="o">=</span> <span class="n">cexpnr</span>
+    <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">tncname</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+    <span class="c">! tg3315 reads in fields specified by fieldvars</span>
+    <span class="k">do </span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nvar</span>
+      <span class="k">select case</span><span class="p">(</span><span class="n">fieldvars</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;u0&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;West-East velocity&#39;</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span><span class="s1">&#39;mttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">u0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;v0&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;South-North velocity&#39;</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span><span class="s1">&#39;tmtt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">v0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>  
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;w0&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="s1">&#39;Vertical velocity&#39;</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span><span class="s1">&#39;ttmt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">w0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>  
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;thl&#39;</span><span class="p">,</span><span class="s1">&#39;Liquid water potential temperature&#39;</span><span class="p">,</span><span class="s1">&#39;K&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">thl0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>  
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;ql&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;ql&#39;</span><span class="p">,</span><span class="s1">&#39;Liquid water mixing ratio&#39;</span><span class="p">,</span><span class="s1">&#39;1e-5kg/kg&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">ql0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span> 
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;qt&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;qt&#39;</span><span class="p">,</span><span class="s1">&#39;Total water mixing ratio&#39;</span><span class="p">,</span><span class="s1">&#39;1e-5kg/kg&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">qt0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;s1&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;sca1&#39;</span><span class="p">,</span><span class="s1">&#39;scalar 1&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">sv0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;s2&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;sca2&#39;</span><span class="p">,</span><span class="s1">&#39;scalar 2&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">sv0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;sca3&#39;</span><span class="p">,</span><span class="s1">&#39;scalar 3&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">sv0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;s4&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;sca4&#39;</span><span class="p">,</span><span class="s1">&#39;scalar 4&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">sv0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;s5&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;sca5&#39;</span><span class="p">,</span><span class="s1">&#39;scalar 5&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">sv0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+        <span class="k">case</span><span class="p">(</span><span class="s1">&#39;p0&#39;</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;pres&#39;</span><span class="p">,</span><span class="s1">&#39;pressure field&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="s1">&#39;tttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">pres0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>
+        <span class="k">case </span><span class="n">default</span>
+        <span class="k">call </span><span class="n">ncinfo</span><span class="p">(</span><span class="n">ncname</span><span class="p">(</span> <span class="n">n</span><span class="p">,:),</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;West-East velocity&#39;</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span><span class="s1">&#39;mttt&#39;</span><span class="p">)</span>
+        <span class="n">pfields</span><span class="p">(</span><span class="n">n</span><span class="p">)%</span><span class="n">point</span> <span class="o">=&gt;</span> <span class="n">u0</span><span class="p">(</span><span class="n">ib</span><span class="p">:</span><span class="n">ie</span><span class="p">,</span><span class="n">jb</span><span class="p">:</span><span class="n">je</span><span class="p">,</span><span class="n">kb</span><span class="p">:</span><span class="n">ke</span><span class="p">)</span>
+      <span class="k">end select</span>
+<span class="k">    end do</span>
+<span class="k"> </span>
+<span class="k">    call </span><span class="n">open_nc</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">nrec</span><span class="p">,</span> <span class="n">n1</span><span class="o">=</span><span class="n">imax</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="n">jmax</span><span class="p">,</span> <span class="n">n3</span><span class="o">=</span><span class="n">khigh</span><span class="o">-</span><span class="n">klow</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nrec</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">      call </span><span class="n">define_nc</span><span class="p">(</span> <span class="n">ncid</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tncname</span><span class="p">)</span>
+      <span class="k">call </span><span class="n">writestat_dims_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>  
+    <span class="k">end if</span>
+<span class="k">    call </span><span class="n">define_nc</span><span class="p">(</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">nvar</span><span class="p">,</span> <span class="n">ncname</span><span class="p">)</span>
+      
+           <span class="k">call </span><span class="n">open_nc</span><span class="p">(</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">nrec</span><span class="p">,</span> <span class="n">n1</span><span class="o">=</span><span class="n">imax</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="n">jmax</span><span class="p">,</span> <span class="n">n3</span><span class="o">=</span><span class="n">khigh</span><span class="o">-</span><span class="n">klow</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="c">!        call open_nc( fname, ncid, nrec, n1=imax+2, n2=jmax+2, n3=khigh-klow+1)  !if want to print ghostcells</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">nrec</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">          write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;calling define_nc&quot;</span>
+          <span class="k">call </span><span class="n">define_nc</span><span class="p">(</span> <span class="n">ncid</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tncname</span><span class="p">)</span>
+          <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s2">&quot;calling writestat_dims_nc&quot;</span>
+          <span class="k">call </span><span class="n">writestat_dims_nc</span><span class="p">(</span><span class="n">ncid</span><span class="p">)</span>  
+        <span class="k">end if</span>
+<span class="k">       call </span><span class="n">define_nc</span><span class="p">(</span> <span class="n">ncid</span><span class="p">,</span> <span class="n">nvar</span><span class="p">,</span> <span class="n">ncname</span><span class="p">)</span>
+
+  <span class="k">end subroutine </span><span class="n">initfielddump</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> uDALES was developed by The uDALES Team</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
